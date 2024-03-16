@@ -7,8 +7,8 @@ let handler = async (m, { conn, command, args }) => {
   if (global.db.data.users[m.sender].exp >= xpperlimit * count) {
     global.db.data.users[m.sender].exp -= xpperlimit * count
     global.db.data.users[m.sender].money += count
-    conn.reply(m.chat, `Sukses Menukarkan Exp Sebesar ${count} Exp`, m)
-  } else conn.reply(m.chat, `Exp Kamu Tidak Mencukupi Untuk Ditukar Sebesar ${count}`, m)
+    conn.reply(m.chat, `تم استبدال Exp بنجاح ${count} Exp`, m)
+  } else conn.reply(m.chat, `Exp الخاص بك لا يكفي ليتم استبداله ${count}`, m)
 }
 handler.help = ['tomoney']
 handler.tags = ['rpg']
